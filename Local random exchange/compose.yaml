@@ -1,0 +1,51 @@
+version: '4.0'
+
+services:
+  rabbitmq-node-1:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-node-1
+    hostname: rabbit1
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=supersecretcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit1
+    networks:
+      - rabbitmq_cluster
+    ports:
+      - "15672:15672" # Management UI
+      - "5672:5672"   # AMQP Port
+
+  rabbitmq-node-2:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-node-2
+    hostname: rabbit2
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=supersecretcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit2
+      - RABBITMQ_CLUSTER_NODES=rabbit@rabbit1
+    depends_on:
+      - rabbitmq-node-1
+    networks:
+      - rabbitmq_cluster
+    ports:
+      - "15673:15672"
+      - "5673:5672"   # AMQP Port
+
+  rabbitmq-node-3:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-node-3
+    hostname: rabbit3
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=supersecretcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit3
+      - RABBITMQ_CLUSTER_NODES=rabbit@rabbit1
+    depends_on:
+      - rabbitmq-node-1
+    networks:
+      - rabbitmq_cluster
+    ports:
+      - "15674:15672"
+      - "5674:5672"
+
+networks:
+  rabbitmq_cluster:
+    driver: bridge
