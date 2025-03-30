@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE.Consumer", "Alternative 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Consumer", "Alternative Exchanges\Main.Consumer\Main.Consumer.csproj", "{EC556ACE-1D0A-4392-95D7-6F3777C12B1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLettering.Producer", "Dead Lettering\DeadLettering.Producer\DeadLettering.Producer.csproj", "{7B407FC6-A695-4BEE-81B5-7D39B92DD1B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLettering.Consumer", "Dead Lettering\DeadLettering.Consumer\DeadLettering.Consumer.csproj", "{F092EB23-3539-4C15-BEC4-0FD2A1F5D517}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +64,13 @@ Global
 		{EC556ACE-1D0A-4392-95D7-6F3777C12B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC556ACE-1D0A-4392-95D7-6F3777C12B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC556ACE-1D0A-4392-95D7-6F3777C12B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B407FC6-A695-4BEE-81B5-7D39B92DD1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B407FC6-A695-4BEE-81B5-7D39B92DD1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B407FC6-A695-4BEE-81B5-7D39B92DD1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B407FC6-A695-4BEE-81B5-7D39B92DD1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F092EB23-3539-4C15-BEC4-0FD2A1F5D517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F092EB23-3539-4C15-BEC4-0FD2A1F5D517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F092EB23-3539-4C15-BEC4-0FD2A1F5D517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F092EB23-3539-4C15-BEC4-0FD2A1F5D517}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
