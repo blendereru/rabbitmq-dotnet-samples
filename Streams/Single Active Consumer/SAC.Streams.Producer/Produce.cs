@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using RabbitMQ.Stream.Client;
+using RabbitMQ.Stream.Client.AMQP;
 using RabbitMQ.Stream.Client.Reliable;
 
 var streamSystem = await StreamSystem.Create(new StreamSystemConfig()).ConfigureAwait(false);
@@ -9,9 +10,16 @@ var messages = new List<Message>();
 for (int i = 0; i < 50; i++)
 {
     var body = Encoding.UTF8.GetBytes($"Message #{i}");
-    var message = new Message(body);
-    await producer.Send(message).ConfigureAwait(false);
+    var message = new Message(body)
+    {
+        ApplicationProperties = new ApplicationProperties()
+        {
+            { "Id", i }
+        }
+    };
+    messages.Add(message);
 }
+await producer.Send(messages, CompressionType.Gzip).ConfigureAwait(false);
 Console.WriteLine("Sending 50 messages to my-sac-stream");
 await producer.Close().ConfigureAwait(false);
 await streamSystem.Close().ConfigureAwait(false);
