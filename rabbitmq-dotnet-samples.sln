@@ -40,6 +40,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.Producer", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.Consumer", "Streams\Super Streams\SuperStreams.Consumer\SuperStreams.Consumer.csproj", "{6B1DB008-3230-44A6-8E2D-4468FF02C0CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.SAC.Publisher", "Streams\Super Streams\Single Active Consumer\SuperStreams.SAC.Publisher\SuperStreams.SAC.Publisher.csproj", "{3DC48F21-8189-41B0-ACA5-AA6B36C1DD12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.SAC.Consumer1", "Streams\Super Streams\Single Active Consumer\SuperStreams.SAC.Consumer1\SuperStreams.SAC.Consumer1.csproj", "{646E6858-3456-4F11-81AA-4E77D0C4E3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.SAC.Consumer2", "Streams\Super Streams\Single Active Consumer\SuperStreams.SAC.Consumer2\SuperStreams.SAC.Consumer2.csproj", "{63B72176-B3E3-43AE-9324-190EA7A90169}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperStreams.SAC.Consumer3", "Streams\Super Streams\Single Active Consumer\SuperStreams.SAC.Consumer3\SuperStreams.SAC.Consumer3.csproj", "{60AC7BDF-9D0F-4E5F-9416-793B79C29482}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +134,21 @@ Global
 		{6B1DB008-3230-44A6-8E2D-4468FF02C0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B1DB008-3230-44A6-8E2D-4468FF02C0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B1DB008-3230-44A6-8E2D-4468FF02C0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC48F21-8189-41B0-ACA5-AA6B36C1DD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC48F21-8189-41B0-ACA5-AA6B36C1DD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC48F21-8189-41B0-ACA5-AA6B36C1DD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC48F21-8189-41B0-ACA5-AA6B36C1DD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646E6858-3456-4F11-81AA-4E77D0C4E3A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646E6858-3456-4F11-81AA-4E77D0C4E3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646E6858-3456-4F11-81AA-4E77D0C4E3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646E6858-3456-4F11-81AA-4E77D0C4E3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B72176-B3E3-43AE-9324-190EA7A90169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B72176-B3E3-43AE-9324-190EA7A90169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B72176-B3E3-43AE-9324-190EA7A90169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B72176-B3E3-43AE-9324-190EA7A90169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60AC7BDF-9D0F-4E5F-9416-793B79C29482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AC7BDF-9D0F-4E5F-9416-793B79C29482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AC7BDF-9D0F-4E5F-9416-793B79C29482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AC7BDF-9D0F-4E5F-9416-793B79C29482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
