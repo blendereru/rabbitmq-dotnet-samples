@@ -4,6 +4,7 @@ using RabbitMQ.Stream.Client.AMQP;
 using RabbitMQ.Stream.Client.Reliable;
 
 var streamSystem = await StreamSystem.Create(new StreamSystemConfig()).ConfigureAwait(false);
+await streamSystem.CreateSuperStream(new PartitionsSuperStreamSpec("invoices", 3));
 var producer = await Producer.Create(new ProducerConfig(streamSystem, "invoices")
 {
     SuperStreamConfig = new SuperStreamConfig()
