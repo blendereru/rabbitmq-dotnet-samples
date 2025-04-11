@@ -24,6 +24,7 @@ var consumer = await Consumer.Create(new ConsumerConfig(streamSystem, "my-sac-st
     },
     ConsumerUpdateListener = async (consumerRef, stream, isActive) =>
     {
+        Console.WriteLine($"ConsumerUpdateListener triggered for stream '{stream}' with consumer reference '{consumerRef}'. IsActive: {isActive}");
         try
         {
             var offset = await streamSystem.QueryOffset(consumerRef, stream).ConfigureAwait(false);
