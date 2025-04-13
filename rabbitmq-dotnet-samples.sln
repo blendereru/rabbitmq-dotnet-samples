@@ -52,6 +52,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherConfirms.Publisher
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherConfirms.Publisher2", "Consumer Acks and Publisher Confirms\PublisherConfirms.Publisher2\PublisherConfirms.Publisher2.csproj", "{15C043B4-BB72-4ADA-9D81-BB37355C4999}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAcks.Publisher", "Consumer Acks and Publisher Confirms\ConsumerAcks.Publisher\ConsumerAcks.Publisher.csproj", "{2CF5182E-8868-4B65-9665-ADB4E5B5125F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAcks.Consumer", "Consumer Acks and Publisher Confirms\ConsumerAcks.Consumer\ConsumerAcks.Consumer.csproj", "{26E7A823-8B0D-4064-B0A2-00557E031AB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,5 +166,13 @@ Global
 		{15C043B4-BB72-4ADA-9D81-BB37355C4999}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15C043B4-BB72-4ADA-9D81-BB37355C4999}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15C043B4-BB72-4ADA-9D81-BB37355C4999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF5182E-8868-4B65-9665-ADB4E5B5125F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF5182E-8868-4B65-9665-ADB4E5B5125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF5182E-8868-4B65-9665-ADB4E5B5125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF5182E-8868-4B65-9665-ADB4E5B5125F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
