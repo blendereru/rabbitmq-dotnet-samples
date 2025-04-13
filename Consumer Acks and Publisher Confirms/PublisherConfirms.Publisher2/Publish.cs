@@ -28,13 +28,12 @@ channel.BasicReturnAsync += (sender, ea) =>
 
 for (int i = 0; i < 100; i++)
 {
+    var properties = new BasicProperties { Persistent = true };
+    var seqNo = await channel.GetNextPublishSequenceNumberAsync();
     await semaphore.WaitAsync();
     try
     {
-        var body = Encoding.UTF8.GetBytes($"Hello, this is message #{i}");
-        var properties = new BasicProperties { Persistent = true};
-        await channel.BasicPublishAsync(string.Empty, "my_queue", true, properties, body);
-        outstandingConfirms.AddLast(await channel.GetNextPublishSequenceNumberAsync() - 1);
+        outstandingConfirms.AddLast(seqNo);
     }
     catch (Exception ex)
     {
@@ -44,6 +43,8 @@ for (int i = 0; i < 100; i++)
     {
         semaphore.Release();
     }
+    var body = Encoding.UTF8.GetBytes($"Hello, this is message #{i}");
+    await channel.BasicPublishAsync(string.Empty, "my_queue", true, properties, body);
 }
 
 await allMessagesConfirmedTcs.Task;
@@ -51,6 +52,7 @@ Console.WriteLine("All messages have been confirmed.");
 
 async Task CleanOutstandingConfirms(ulong deliveryTag, bool multiple)
 {
+    Console.WriteLine($"{DateTime.Now} confirming message: {deliveryTag}, multiple: {multiple}");
     await semaphore.WaitAsync();
     try
     {
