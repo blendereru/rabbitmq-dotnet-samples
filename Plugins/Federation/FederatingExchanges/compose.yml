@@ -1,0 +1,27 @@
+version: '4.0'
+
+services:
+  blue:
+    image: rabbitmq:4.0-management
+    container_name: blue
+    hostname: blue
+    ports:
+      - "15672:15672"  # Management UI
+      - "5672:5672"    # AMQP
+    networks:
+      - rabbit_net
+
+  green:
+    image: rabbitmq:4.0-management
+    container_name: green
+    hostname: green
+    ports:
+      - "15673:15672"
+      - "5673:5672"
+    networks:
+      - rabbit_net
+        
+
+networks:
+  rabbit_net:
+    driver: bridge

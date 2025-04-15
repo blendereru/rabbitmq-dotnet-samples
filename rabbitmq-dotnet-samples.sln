@@ -56,6 +56,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAcks.Publisher", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerAcks.Consumer", "Consumer Acks and Publisher Confirms\ConsumerAcks.Consumer\ConsumerAcks.Consumer.csproj", "{26E7A823-8B0D-4064-B0A2-00557E031AB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FederationPlugin.Cluster1.Producer", "Plugins\Federation\FederatingExchanges\FederationPlugin.Cluster1.Producer\FederationPlugin.Cluster1.Producer.csproj", "{6AD6A21F-C4AC-42F7-989C-6ED411E003DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FederationPlugin.Cluster2.Consumer", "Plugins\Federation\FederatingExchanges\FederationPlugin.Cluster2.Consumer\FederationPlugin.Cluster2.Consumer.csproj", "{223DB26D-453A-4FE5-A010-E503255857B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -174,5 +178,13 @@ Global
 		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26E7A823-8B0D-4064-B0A2-00557E031AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD6A21F-C4AC-42F7-989C-6ED411E003DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD6A21F-C4AC-42F7-989C-6ED411E003DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD6A21F-C4AC-42F7-989C-6ED411E003DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD6A21F-C4AC-42F7-989C-6ED411E003DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223DB26D-453A-4FE5-A010-E503255857B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223DB26D-453A-4FE5-A010-E503255857B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223DB26D-453A-4FE5-A010-E503255857B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223DB26D-453A-4FE5-A010-E503255857B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
