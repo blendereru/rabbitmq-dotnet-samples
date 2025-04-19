@@ -33,6 +33,7 @@ this binding does not influence `log_queue` on Cluster A. Messages published to 
 Cluster A with the routing key "warning" will not reach `log_queue` on Cluster A
 (since there's no binding for "warning"), and consequently, `fed_log_queue` on Cluster B will not
 receive these messages, despite its local binding.
+
 2) A federated queue can be "upstream" from another federated queue. One can even form "loops",
 for example, queue A declares queue B to be upstream from it, and queue B declares queue A to be
 upstream from it. More complex multiple-connected arrangements are allowed. But `max-hops` type of 
@@ -46,6 +47,7 @@ apply it to `queues`.
 rabbitmqctl set_parameter federation-upstream blue '{"uri":"amqp://guest:guest@blue:5672"}'
 ```
 Here, we set an upstream named `blue` from where we expect to pull messages.
+
 2) Set a policy:
 ```bash
 rabbitmqctl set_policy --vhost "/" --apply-to queues federate-orders "^federated\.orders$" '{"federation-upstream":"blue"}'
