@@ -1,0 +1,67 @@
+version: '4.0'
+
+services:
+  rabbitmq-a1:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-a1
+    hostname: rabbit-a1
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=clusterAcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit-a1
+    networks:
+      - cluster_a_net
+    ports:
+      - "15672:15672" # Management UI
+      - "5672:5672"   # AMQP Port
+
+  rabbitmq-a2:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-a2
+    hostname: rabbit-a2
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=clusterAcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit-a2
+      - RABBITMQ_CLUSTER_NODES=rabbit@rabbit-a1
+    depends_on:
+      - rabbitmq-a1
+    networks:
+      - cluster_a_net
+    ports:
+      - "15673:15672"
+      - "5673:5672"
+
+  # Cluster B
+  rabbitmq-b1:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-b1
+    hostname: rabbit-b1
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=clusterBcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit-b1
+    networks:
+      - cluster_b_net
+    ports:
+      - "15674:15672" # Management UI
+      - "5674:5672"   # AMQP Port
+
+  rabbitmq-b2:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-b2
+    hostname: rabbit-b2
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=clusterBcookie
+      - RABBITMQ_NODENAME=rabbit@rabbit-b2
+      - RABBITMQ_CLUSTER_NODES=rabbit@rabbit-b1
+    depends_on:
+      - rabbitmq-b1
+    networks:
+      - cluster_b_net
+    ports:
+      - "15675:15672"
+      - "5675:5672"
+
+networks:
+  cluster_a_net:
+    driver: bridge
+  cluster_b_net:
+    driver: bridge

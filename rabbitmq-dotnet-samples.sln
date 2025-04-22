@@ -64,6 +64,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FederationPlugin.FederatedQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FederationPlugin.FederatedQueues.Cluster2.Consumer", "Plugins\Federation\FederatedQueues\FederationPlugin.FederatedQueues.Cluster2.Consumer\FederationPlugin.FederatedQueues.Cluster2.Consumer.csproj", "{9D1C5F30-E9E9-4534-A918-9E75D3E91662}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shovel.Client1", "Plugins\Shovel\Shovel.Client1\Shovel.Client1.csproj", "{3CE87ABF-9FF0-4EC5-9779-1CCB0711B66A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shovel.Client2", "Plugins\Shovel\Shovel.Client2\Shovel.Client2.csproj", "{5E80C006-CB58-4FBB-B212-0188F5384285}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,5 +202,13 @@ Global
 		{9D1C5F30-E9E9-4534-A918-9E75D3E91662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D1C5F30-E9E9-4534-A918-9E75D3E91662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D1C5F30-E9E9-4534-A918-9E75D3E91662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE87ABF-9FF0-4EC5-9779-1CCB0711B66A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE87ABF-9FF0-4EC5-9779-1CCB0711B66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE87ABF-9FF0-4EC5-9779-1CCB0711B66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE87ABF-9FF0-4EC5-9779-1CCB0711B66A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E80C006-CB58-4FBB-B212-0188F5384285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E80C006-CB58-4FBB-B212-0188F5384285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E80C006-CB58-4FBB-B212-0188F5384285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E80C006-CB58-4FBB-B212-0188F5384285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
