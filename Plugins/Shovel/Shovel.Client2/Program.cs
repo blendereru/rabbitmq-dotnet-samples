@@ -2,7 +2,7 @@
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-var connectionFactory = new ConnectionFactory() {HostName = "localhost", Port = 5674};
+var connectionFactory = new ConnectionFactory() {HostName = "localhost", Port = 5673};
 await using var connection = await connectionFactory.CreateConnectionAsync();
 await using var channel = await connection.CreateChannelAsync();
 var consumer = new AsyncEventingBasicConsumer(channel);
