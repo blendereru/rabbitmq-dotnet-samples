@@ -4,6 +4,8 @@ This project encapsulates my exploration and understanding of RabbitMQ, a robust
 broker that facilitates asynchronous communication between distributed systems. Through this summary,
 I aim to distill the core concepts, components, and practical applications of `RabbitMQ` as presented in its
 [official](https://www.rabbitmq.com/docs) documentation.
+
+[![rabbitmq](https://img.shields.io/badge/rabbitmq-4.0-orange?style=flat&logo=rabbitmq&link=https://www.rabbitmq.com/docs/4.0)](https://www.rabbitmq.com/docs/4.0)
 ## Table of Contents
 * [Direct reply-to](https://github.com/blendereru/rabbitmq-dotnet-samples/tree/main/Direct%20reply-to)
 * [Local random exchange](https://github.com/blendereru/rabbitmq-dotnet-samples/tree/main/Local%20random%20exchange)
